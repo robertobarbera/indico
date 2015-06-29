@@ -32,15 +32,6 @@ from indico.web.util import jsonify_template, jsonify_data
 from MaKaC.webinterface.rh.conferenceModif import RHConferenceModifBase
 
 
-def _random_date():
-    from datetime import datetime
-    import random
-    year = random.randint(1950, 2000)
-    month = random.randint(1, 12)
-    day = random.randint(1, 28)
-    return datetime(year, month, day)
-
-
 def _get_attachment_list(linked_object):
     folders = (AttachmentFolder
                .find(linked_object=linked_object, is_deleted=False)
