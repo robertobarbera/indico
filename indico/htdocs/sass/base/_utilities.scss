@@ -41,3 +41,10 @@
         @extend %adjacent-icon;
     }
 }
+
+@mixin empty-icon-before {
+    &:before {
+        @extend %adjacent-icon;
+        content: '\2001';
+    }
+}
